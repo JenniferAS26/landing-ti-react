@@ -6,14 +6,17 @@
   height: 126px
   position: relative
   cursor: pointer
+  color: $White
+  &:hover
+    opacity: 0.6
+    color: $Black
   &__title
     position: absolute
+    z-index: 33
     bottom: 15px
     left: 10px
-    z-index: 2
     font-size: 1.8rem
     font-weight: $light-weight
-    color: $White
     text-transform: uppercase
     display: grid
     align-items: end
@@ -28,8 +31,7 @@
   &__image-container 
     width: $mobile
     height: inherit
-    &:hover
-      opacity: 0.3
+    
   &__image 
     filter: brightness(70%)
     width: 100%
@@ -38,3 +40,4 @@
   @media (min-width: $desktop)
     width: 255px
     height: 450px
+    
