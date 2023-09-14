@@ -1,0 +1,39 @@
+@use '../../styles/variables' as *
+
+$header-width: 1270
+$header-height: 570
+
+*
+    font-size: 4vw
+    letter-spacing: -0.05em
+    color: $White
+    line-height: 0.9
+
+figure
+    height: 100vh
+    width: 100vw
+    overflow: hidden
+    position: relative
+
+    h1, nav, article
+        position: absolute
+
+    nav
+        // top: 0
+        // left: 0
+
+    h1
+        font-size: 1em
+        top: calc(50 / $header-height * 100) + vh
+        left: calc(145 / $header-width * 100) + vw
+
+    article
+        display: flex
+        align-items: center
+        border: 2px solid $White
+        font-weight: $light-weight
+        bottom: calc(100 / $header-height * 100) + vh
+        width: calc(580 / $header-width * 100) + vw
+        height: calc(220 / $header-height * 100) + vh
+        left: calc(145 / $header-width * 100) + vw
+        padding-left: calc(35 / $header-width * 100) + vw
