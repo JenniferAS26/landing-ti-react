@@ -5,6 +5,7 @@ import './styles/global.sass'
 
 // prevent regular experience to amplify web immersion
 document.oncontextmenu = () => false
+document.ondragstart = () => false
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
