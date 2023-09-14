@@ -16,7 +16,9 @@ function App() {
     return (
         <section className='wrapper'>
             {/* <Header /> */}
-            <Hero />
+            <Hero>
+                
+            </Hero>
             <Gallery>
                 {
                     cardDetails.map((cardDetail, index) => (
