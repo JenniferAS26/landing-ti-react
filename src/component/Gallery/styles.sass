@@ -1,0 +1,57 @@
+@use '../../styles/_variables.sass' as *
+@use '../../styles/_mixins' as *
+
+.gallery-section 
+  width: inherit
+  height: 100%
+  margin-top: 20px
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 50px 1fr 80px
+  justify-items: center
+  align-items: center
+  &__title
+    font-size: 1.8rem
+    font-weight: $light-weight
+    letter-spacing: 1px
+    color: $Black
+    text-align: center
+    align-self: start
+  &__cards-container 
+    width: 100%
+    height: 100%
+    display: grid
+    justify-content: center
+    gap: 25px
+  &__button
+    @include buttonStyle($width: 150px , $height: 40px, $b-r: none, $bg-color: $White, $color: $Black, $f-s: 1.4rem)
+    border: 1px solid $Black
+    font-weight: $medium-weight 
+    letter-spacing: 3px
+    align-self: end
+  @media (min-width: $desktop)
+    grid-template-rows: 50px 1fr
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-areas: "title button" "card-container card-container"
+    gap: 20px
+    &__title 
+      font-size: 3.8rem
+      grid-area: title
+      align-self: center
+      justify-self: flex-start
+      margin-left: 95px
+    &__cards-container
+      grid-area: card-container
+      width: 100%
+      display: grid
+      grid-template-columns: repeat(4, 255px)
+      grid-template-rows: repeat(2, 450px)
+      gap: 70px
+    &__button 
+      @include buttonStyle($width: 150px , $height: 40px, $b-r: none, $bg-color: $Black, $color: $White, $f-s: 1.6rem)
+      margin-right: 101px
+      grid-area: button
+      align-self: center
+      justify-self: flex-end
+    
+  
