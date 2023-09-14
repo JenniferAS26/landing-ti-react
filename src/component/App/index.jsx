@@ -10,12 +10,8 @@ function App() {
     useEffect(() => {
         fetch('https://api-workshop-3-production.up.railway.app/gallery')
         .then(response => response.json())
-        .then(data => {
-            setCardDetails(data)
-            console.log(data)
-        })
+        .then(data => setCardDetails(data))
     }, [])
-    // console.log(cardDetails)
     return (
         <section className='wrapper'>
             {/* <Header /> */}
