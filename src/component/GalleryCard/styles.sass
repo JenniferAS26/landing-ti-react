@@ -7,17 +7,31 @@
   position: relative
   &__title
     position: absolute
-    bottom: 20px
+    bottom: 15px
     left: 10px
     font-size: 1.8rem
     font-weight: $light-weight
     color: $White
     text-transform: uppercase
-    display: block
+    display: grid
+    align-items: end
     width: 95px
+    height: 37px
+    @media (min-width: $desktop)
+      font-size: 2.6rem
+      left: calc( 50% - 120px / 2 )
+      bottom: 25px
+      width: 120px
+      height: 40px
+  &__image-container 
+    width: $mobile
+    height: inherit
+    &:hover
+      opacity: 0.3
   &__image 
     width: 100%
     height: 100%
+    
   @media (min-width: $desktop)
     width: 255px
     height: 450px
