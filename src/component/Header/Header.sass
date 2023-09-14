@@ -24,15 +24,16 @@ figure
 
     h1
         font-size: 1em
-        // top: 200px
+        top: calc(50 / $header-height * 100) + vh
+        left: calc(145 / $header-width * 100) + vw
 
     article
         display: flex
         align-items: center
         border: 2px solid $White
         font-weight: $light-weight
-        top: calc(200 / $header-height * 100) + vh
-        width: 46vw
+        bottom: calc(100 / $header-height * 100) + vh
+        width: calc(580 / $header-width * 100) + vw
         height: calc(220 / $header-height * 100) + vh
-        left: 12vw
-        padding-left: calc(35 / 720 * 100) + vh
+        left: calc(145 / $header-width * 100) + vw
+        padding-left: calc(35 / $header-width * 100) + vw
