@@ -36,6 +36,9 @@ const Header = () => {
                     placeholder({ mode: 'vertalize' }),
                 ]}
             />
+            <nav>hi!</nav>
+            <h1>loopstudios</h1>
+            <article>IMMERSIVE EXPERIENCES THAT DELIVER</article>
         </figure>
     )
 }
