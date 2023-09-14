@@ -4,7 +4,7 @@ import React from 'react'
 const RegularHeader = () => {
     return (
         <figure>
-            <img src='src/assets/desktop/desktop/image-hero.jpg'></img>
+            <img src='src/assets/desktop/image-hero.jpg'></img>
         </figure>
     )
 }
