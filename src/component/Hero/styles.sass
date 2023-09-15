@@ -6,7 +6,7 @@
   position: relative
   display: grid
   justify-items: center
-  @media (min-width: 1440px) 
+  @media (min-width: 1440px)
     justify-items: start
   &__image-container
     width: 100%
@@ -15,22 +15,22 @@
       width: 100%
       height: 100%
   &__title-container
-    width: 340px
-    height: 250px
+    max-width: 550px
     border: 2px solid $White
     position: absolute
     bottom: calc( 50% - 350px / 2)
     display: grid
     align-items: center
     padding: 20px
-    @media (min-width: 1440px) 
-      width: 540px
-      height: 220px
-      margin-left: 90px
+    @media (min-width: 1440px)
+      min-width: 40vw
+      height: 300px
+      margin-left: 12vw
+      padding: 50px
     &--title
       font-family: $font-source1
       font-size: 5rem
       font-weight: $light-weight
       text-transform: uppercase
-      @media (min-width: 1440px) 
-        font-size: 6rem
+      @media (min-width: 1440px)
+        font-size: 8rem

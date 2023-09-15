@@ -12,21 +12,30 @@
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
+    "@nextui-org/navbar": "^2.0.21",
+    "@nextui-org/system": "^2.0.9",
+    "@nextui-org/theme": "^2.1.8",
+    "framer-motion": "^10.16.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.15.0"
+    "react-router-dom": "^6.15.0",
+    "vite-plugin-alias": "^0.1.0",
+    "vite-plugin-sass": "^0.1.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
-    "@vitejs/plugin-react": "^4.0.3",
+    "@vitejs/plugin-react": "^4.0.4",
+    "autoprefixer": "^10.4.15",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.29",
     "react-icons": "^4.11.0",
     "sass": "^1.66.1",
+    "tailwindcss": "^3.3.3",
     "vite": "^4.4.5"
   }
 }

@@ -45,17 +45,16 @@ const Hero = ({ children }) => {
                         placeholder({ mode: 'vertalize' }),
                     ]}
                 />
-
                 {/* <source
                     media='(min-width: 1440px)'
                     srcSet={
                         
                     }
                 /> */}
-                <img
+                {/* <img
                     src={heroBannerMobile}
                     alt='hero banner image'
-                />
+                /> */}
             </picture>
             <div className='hero__title-container'>
                 <h1 className='hero__title-container--title'>
