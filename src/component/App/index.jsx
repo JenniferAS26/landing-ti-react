@@ -17,7 +17,7 @@ function App() {
         <section className='wrapper'>
             {/* <Header /> */}
             <Hero>
-                
+                <nav></nav>
             </Hero>
             <Gallery>
                 {
