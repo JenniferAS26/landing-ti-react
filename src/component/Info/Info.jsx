@@ -1,5 +1,5 @@
 import './Info.sass'
-import React from 'react'
+
 
 const Info = () => {
     return (
