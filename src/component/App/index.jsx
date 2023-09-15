@@ -1,6 +1,7 @@
-import Header from '../Header/Header'
+// import Header from '../Header/Header'
 // import { Outlet } from 'react-router-dom'
 import { useState, useEffect } from 'react';
+import Hero from '../Hero';
 import Gallery from '../Gallery'
 import GalleryCard from "../GalleryCard";
 
@@ -14,7 +15,10 @@ function App() {
     }, [])
     return (
         <section className='wrapper'>
-            <Header />
+            {/* <Header /> */}
+            <Hero>
+                <nav></nav>
+            </Hero>
             <Gallery>
                 {
                     cardDetails.map((cardDetail, index) => (
