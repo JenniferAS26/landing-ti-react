@@ -41,7 +41,7 @@ const Hero = ({ children }) => {
                             rootMargin: '10px 20px 10px 30px',
                             threshold: 0.25,
                         }),
-                        responsive({ steps: 200 }),
+                        responsive({ steps: 100 }),
                         placeholder({ mode: 'vertalize' }),
                     ]}
                 />
