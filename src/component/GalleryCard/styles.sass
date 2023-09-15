@@ -8,8 +8,8 @@
   cursor: pointer
   color: $White
   &:hover
-    opacity: 0.6
-    color: $Black
+    .gallery-card__title
+      color: $Black
   &__title
     color: inherit
     position: absolute
@@ -32,7 +32,8 @@
   &__image-container
     width: $mobile
     height: inherit
-
+    &:hover
+      opacity: 0.6
   &__image
     filter: brightness(70%)
     width: 100%
