@@ -10,7 +10,7 @@ import {
 export default function NavBarTailWindNextUI() {
     return (
         <Navbar
-            className='bg-transparent absolute text-white top-20 navbar-height'
+            className='bg-transparent absolute text-white top-20'
             style={{
                 backdropFilter: 'none !important',
                 WebkitBackdropFilter: 'none !important',
@@ -23,14 +23,14 @@ export default function NavBarTailWindNextUI() {
                     'items-center',
                     "data-[active=true]:after:content-['']",
                     'data-[active=true]:after:absolute',
-                    'data-[active=true]:after:bg-white',
-                    'data-[active=true]:after:top-7',
+                    'data-[active=true]:after:m-auto',
                     'data-[active=true]:after:top-7',
                     'data-[active=true]:after:left-0',
                     'data-[active=true]:after:right-0',
+                    'data-[active=true]:after:w-12',
                     'data-[active=true]:after:h-[4px]',
                     'data-[active=true]:after:rounded-[2px]',
-                    'data-[active=true]:after:bg-primary',
+                    'data-[active=true]:after:bg-white',
                 ],
             }}>
             <NavbarBrand>
