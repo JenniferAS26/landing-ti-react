@@ -7,6 +7,7 @@ import {
 } from '@cloudinary/react'
 import { Cloudinary } from '@cloudinary/url-gen'
 import './styles.sass'
+import useWindowSize from '../../hooks/useWindowSize'
 
 const Hero = ({ children }) => {
     Hero.propTypes = {
@@ -30,13 +31,13 @@ const Hero = ({ children }) => {
     heroBannerDesktop.format('auto').quality('auto')
     heroBannerMobile.format('auto').quality('auto')
 
-    const isMobile = window.innerWidth <= 768
+    const { width } = useWindowSize()
 
     return (
         <section className='hero'>
             {children}
             <picture className='hero__image-container'>
-                {isMobile ? (
+                {width <= 768 ? (
                     <AdvancedImage
                         cldImg={heroBannerMobile}
                         plugins={[
@@ -64,9 +65,9 @@ const Hero = ({ children }) => {
             </picture>
             <div className='hero__title-container'>
                 <h1 className='hero__title-container--title'>
-                    <h2>immersive</h2> 
-                    <h2>experieces</h2> 
-                    <h2>that deliver</h2>
+                    <span>immersive</span> 
+                    <span>experieces</span> 
+                    <span>that deliver</span>
                 </h1>
             </div>
         </section>
