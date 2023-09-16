@@ -17,12 +17,15 @@
   &__title-container
     border: 2px solid $White
     position: absolute
-    bottom: calc( 40% - 350px / 2)
     display: grid
     align-items: center
-    padding: 20px
+    padding: 25px
+    width: 85%
+    bottom: calc( 62% - 350px / 2)
     @media (min-width: $desktop)
       margin-left: 10vw
+      width: inherit
+      bottom: calc( 40% - 350px / 2)
       padding: 40px
     &--title
       font-family: $font-source1
@@ -32,6 +35,9 @@
       @media (min-width: $desktop)
     span
       font-size: min(8vw, 7rem)
-      letter-spacing: 1rem
-      line-height: 1.1
+      letter-spacing: 0.05rem
+      font-size: 4rem
       display: block
+      @media (min-width: $desktop)
+        letter-spacing: 1rem
+        line-height: 1.1
