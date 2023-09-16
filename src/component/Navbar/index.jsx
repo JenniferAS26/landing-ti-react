@@ -1,4 +1,3 @@
-import { none } from '@cloudinary/url-gen/qualifiers/fontHinting'
 import './styles.sass'
 import {
     Navbar,
@@ -31,10 +30,10 @@ export default function NavBarTailWindNextUI() {
                 ],
             }}>
             <NavbarBrand>
-                <p className='font-bold fixed left-12vw'>loopstudios</p>
+                <p className='font-bold fixed left-10vw'>loopstudios</p>
             </NavbarBrand>
             <NavbarContent
-                className='sm:flex gap-12 fixed right-60'
+                className='sm:flex gap-5vw fixed right-10vw'
                 justify='center'>
                 <NavbarItem>
                     <Link
