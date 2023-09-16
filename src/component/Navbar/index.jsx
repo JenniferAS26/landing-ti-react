@@ -1,3 +1,4 @@
+import { none } from '@cloudinary/url-gen/qualifiers/fontHinting'
 import './styles.sass'
 import {
     Navbar,
@@ -10,11 +11,7 @@ import {
 export default function NavBarTailWindNextUI() {
     return (
         <Navbar
-            className='bg-transparent absolute text-white top-20'
-            style={{
-                backdropFilter: 'none !important',
-                WebkitBackdropFilter: 'none !important',
-            }}
+            className='bg-transparent absolute text-white top-40'
             classNames={{
                 item: [
                     'flex',
@@ -24,20 +21,20 @@ export default function NavBarTailWindNextUI() {
                     "data-[active=true]:after:content-['']",
                     'data-[active=true]:after:absolute',
                     'data-[active=true]:after:m-auto',
-                    'data-[active=true]:after:top-7',
+                    'data-[active=true]:after:top-9',
                     'data-[active=true]:after:left-0',
                     'data-[active=true]:after:right-0',
-                    'data-[active=true]:after:w-12',
-                    'data-[active=true]:after:h-[4px]',
+                    'data-[active=true]:after:w-14',
+                    'data-[active=true]:after:h-[3px]',
                     'data-[active=true]:after:rounded-[2px]',
                     'data-[active=true]:after:bg-white',
                 ],
             }}>
             <NavbarBrand>
-                <p className='font-bold'>loopstudios</p>
+                <p className='font-bold fixed left-12vw'>loopstudios</p>
             </NavbarBrand>
             <NavbarContent
-                className='hidden sm:flex gap-4'
+                className='sm:flex gap-12 fixed right-60'
                 justify='center'>
                 <NavbarItem>
                     <Link
