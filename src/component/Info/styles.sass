@@ -2,15 +2,18 @@
 @use '../../styles/_mixins' as *
 
 .info-section
-  padding: 7.25rem
   background-color: $White
   display: flex
-  justify-content: space-around
+  @media (min-width: $desktop)
+    padding: 7.25rem
+    justify-content: space-around
   &-container
-    border: 1px solid red
+    // border: 1px solid red
     height: 100%
+    width: 100%
     display: flex
-    align-items: center
+    flex-direction: column
+    justify-content: center
     position: relative
     @media (min-width: $desktop)
       width: 80%
@@ -33,23 +36,25 @@
     background-color: $White
     padding: 40px
     font-family: $font-source1
-    font-weight: $light-weight
     line-height: 1.5
     height: auto
+    font-weight: $light-weight
     align-content: center
+    text-align: center
     @media (min-width: $desktop)
+      text-align: left
       max-width: 700px
       z-index: 2
-      padding: 40px 80px
+      padding: 80px 80px
       position: absolute
-      top: 50%
+      top: 35%
       left: 50%
 
     &__title
       font-size: 3.5rem
-      font-weight: $bold-weight
       margin-bottom: 20px
       color: $Black
+      font-weight: $light-weight
       @media (min-width: $desktop)
         font-size: 4.5rem
         margin-bottom: 40px
@@ -60,6 +65,7 @@
       font-size: 1.6rem
       margin-bottom: 20px
       color: $Black
+      line-height: 2.5rem
       @media (min-width: $desktop)
         font-size: 2rem
         margin-bottom: 40px
