@@ -1,9 +1,10 @@
-import './Info.sass'
+import './styles.sass'
 
 
 const Info = () => {
     return (
         <section className='info-section'>
+            <picture></picture>
             <h2 className='info-section__title'>THE LEADER IN INTERACTIVE VR</h2>
             <article className='info-section__text'>
                 Founded in 2011, Loopstudios has been producing world-class

@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Hero from '../Hero';
 import Gallery from '../Gallery'
 import GalleryCard from "../GalleryCard";
+import Info from "../Info";
+
 
 function App() {
     const [cardDetails, setCardDetails] = useState([])
@@ -19,6 +21,7 @@ function App() {
             <Hero>
                 <nav></nav>
             </Hero>
+            <Info />
             <Gallery>
                 {
                     cardDetails.map((cardDetail, index) => (
