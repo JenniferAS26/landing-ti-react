@@ -9,7 +9,7 @@ import Info from "../Info";
 
 function App() {
     const [cardDetails, setCardDetails] = useState([])
-
+    
     useEffect(() => {
         fetch('https://api-workshop-3-production.up.railway.app/gallery')
         .then(response => response.json())
