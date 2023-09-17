@@ -7,6 +7,7 @@ import {
 } from '@cloudinary/react'
 import { Cloudinary } from '@cloudinary/url-gen'
 import './styles.sass'
+import useWindowSize from '../../hooks/useWindowSize'
 
 const Hero = ({ children }) => {
     Hero.propTypes = {
@@ -30,36 +31,43 @@ const Hero = ({ children }) => {
     heroBannerDesktop.format('auto').quality('auto')
     heroBannerMobile.format('auto').quality('auto')
 
+    const { width } = useWindowSize()
+
     return (
         <section className='hero'>
             {children}
             <picture className='hero__image-container'>
-                <AdvancedImage
-                    cldImg={heroBannerDesktop}
-                    plugins={[
-                        lazyload({
-                            rootMargin: '10px 20px 10px 30px',
-                            threshold: 0.25,
-                        }),
-                        responsive({ steps: 100 }),
-                        placeholder({ mode: 'vertalize' }),
-                    ]}
-                />
-
-                {/* <source
-                    media='(min-width: 1440px)'
-                    srcSet={
-                        
-                    }
-                /> */}
-                <img
-                    src={heroBannerMobile}
-                    alt='hero banner image'
-                />
+                {width <= 768 ? (
+                    <AdvancedImage
+                        cldImg={heroBannerMobile}
+                        plugins={[
+                            lazyload({
+                                rootMargin: '10px 20px 10px 30px',
+                                threshold: 0.25,
+                            }),
+                            responsive({ steps: 100 }),
+                            placeholder({ mode: 'vertalize' }),
+                        ]}
+                    />
+                ) : (
+                    <AdvancedImage
+                        cldImg={heroBannerDesktop}
+                        plugins={[
+                            lazyload({
+                                rootMargin: '10px 20px 10px 30px',
+                                threshold: 0.25,
+                            }),
+                            responsive({ steps: 100 }),
+                            placeholder({ mode: 'vertalize' }),
+                        ]}
+                    />
+                )}
             </picture>
             <div className='hero__title-container'>
                 <h1 className='hero__title-container--title'>
-                    immersive experieces that deliver
+                    <span>immersive</span> 
+                    <span>experieces</span> 
+                    <span>that deliver</span>
                 </h1>
             </div>
         </section>
