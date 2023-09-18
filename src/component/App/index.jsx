@@ -4,9 +4,8 @@ import Hero from '../Hero'
 import NavBarTailWindNextUI from '../Navbar'
 import Gallery from '../Gallery'
 import GalleryCard from "../GalleryCard";
-// import Info from "../Info"
+import Info from "../Info"
 import Footer from '../Footer';
-import InfoTemp from '../InfoTemp';
 
 function App() {
     const [cardDetails, setCardDetails] = useState([])
@@ -21,7 +20,7 @@ function App() {
             <Hero>
                 <NavBarTailWindNextUI />
             </Hero>
-            <InfoTemp />
+            <Info />
             <Gallery>
                 {cardDetails.map((cardDetail, index) => (
                     <GalleryCard
