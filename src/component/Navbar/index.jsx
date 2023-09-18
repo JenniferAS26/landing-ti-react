@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './styles.sass'
 import {
     Navbar,
@@ -8,8 +9,23 @@ import {
 } from '@nextui-org/react'
 
 export default function NavBarTailWindNextUI() {
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const menuItems = [
+      "Profile",
+      "Dashboard",
+      "Activity",
+      "Analytics",
+      "System",
+      "Deployments",
+      "My Settings",
+      "Team Settings",
+      "Help & Feedback",
+      "Log Out",
+    ]
+
     return (
-        <Navbar
+        <Navbar 
             className='bg-transparent absolute text-white top-40'
             classNames={{
                 item: [
