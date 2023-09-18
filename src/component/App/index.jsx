@@ -5,6 +5,7 @@ import NavBarTailWindNextUI from '../Navbar'
 import Gallery from '../Gallery'
 import GalleryCard from "../GalleryCard";
 import Info from "../Info"
+import Footer from '../Footer';
 
 function App() {
     const [cardDetails, setCardDetails] = useState([])
@@ -28,7 +29,7 @@ function App() {
                     />
                 ))}
             </Gallery>
-            {/* <Outlet /> */}
+            <Footer />
         </section>
     )
 }

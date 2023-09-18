@@ -1,0 +1,73 @@
+@use '../../styles/_variables.sass' as *
+@use '../../styles/_mixins' as *
+
+.footer 
+  min-width: $mobile
+  width: 100%
+  height: 700px
+  margin-top: 140px
+  background-color: $Black
+  display: grid
+  align-content: space-around
+  .logo-options 
+    width: inherit
+    min-height: 450px
+    display: grid
+    grid-template-rows: 100px auto
+    justify-items: center
+    &__title
+      align-self: center
+    &__list
+      display: grid
+      li
+        font-size: 2.5rem
+        font-weight: $light-weight
+        align-self: center
+  .social-media
+    width: 100%
+    min-height: 200px
+    display: grid
+    grid-template-rows: 100px auto
+    justify-items: center
+    &__list
+      width: 100%
+      padding: 0 80px
+      @include flexCenter(row, $justify: space-evenly, $align: center)
+    &__text
+      font-size: 2.1rem  
+      font-weight: $light-weight
+  @media (min-width: $tablet)  
+    height: 450px  
+    grid-template-columns: repeat(2, 1fr)
+    .social-media
+      align-self: center
+      &__text
+        font-size: 2.6rem 
+  @media (min-width: $desktop)  
+    padding: 0 110px
+    height: 160px  
+    grid-template-columns: repeat(2, 1fr)
+    .logo-options
+      min-height: 160px
+      align-content: center
+      &__title
+        margin-top: 20px
+        align-self: start
+        justify-self: start
+        font-size: 3.4rem
+      &__list
+        width: 540px
+        justify-self: start
+        @include flexCenter(row, $justify: space-between, $align: center)
+    .social-media
+      width: 650px
+      min-height: 160px
+      justify-items: end
+      padding: 0 
+      &__list
+        width: inherit
+        justify-content: space-between
+        padding: 0
+        padding-left: 300px
+        li 
+          font-size: 7rem
