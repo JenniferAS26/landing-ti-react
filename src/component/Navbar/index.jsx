@@ -8,25 +8,25 @@ import {
     Link,
 } from '@nextui-org/react'
 
-export default function NavBarTailWindNextUI() {
+export default function NavBarTailWindNextUI({ width }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
+    
     const menuItems = [
-      "Profile",
-      "Dashboard",
-      "Activity",
-      "Analytics",
-      "System",
-      "Deployments",
-      "My Settings",
-      "Team Settings",
-      "Help & Feedback",
-      "Log Out",
+        'Profile',
+        'Dashboard',
+        'Activity',
+        'Analytics',
+        'System',
+        'Deployments',
+        'My Settings',
+        'Team Settings',
+        'Help & Feedback',
+        'Log Out',
     ]
 
     return (
-        <Navbar 
-            className='bg-transparent absolute text-white top-40'
+        <Navbar
+            className='top-40'
             classNames={{
                 item: [
                     'flex',

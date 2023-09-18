@@ -1,4 +1,3 @@
-// import Header from '../Header/Header'
 // import { Outlet } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Hero from '../Hero'
