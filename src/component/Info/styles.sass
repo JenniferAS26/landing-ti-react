@@ -4,7 +4,9 @@
 .info-section
   background-color: $White
   display: flex
-  @media (min-width: $tablet)
+  // border: 1px solid blue
+  width: 100%
+  @media (min-width: $desktop)
     padding: 7.25rem
     justify-content: space-around
   &-container
@@ -31,11 +33,12 @@
       z-index: 1
 
   &-write
+    // border: 1px solid yellow
     background-color: $White
     padding: 40px
     font-family: $font-source1
     line-height: 1.5
-    height: auto
+    max-height: 375px
     font-weight: $light-weight
     align-content: center
     text-align: center
