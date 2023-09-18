@@ -4,11 +4,13 @@
 .info-section
   background-color: $White
   display: flex
+  // border: 1px solid blue
+  width: 100%
   @media (min-width: $desktop)
     padding: 7.25rem
     justify-content: space-around
   &-container
-    // border: 1px solid red
+    border: 1px solid red
     height: 100%
     width: 100%
     display: flex
@@ -33,11 +35,12 @@
 
 
   &-write
+    // border: 1px solid yellow
     background-color: $White
     padding: 40px
     font-family: $font-source1
     line-height: 1.5
-    height: auto
+    max-height: 400px
     font-weight: $light-weight
     align-content: center
     text-align: center
