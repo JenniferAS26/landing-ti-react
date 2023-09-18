@@ -24,6 +24,14 @@ export default function NavBarTailWindNextUI({ width }) {
         'Log Out',
     ]
 
+    const navItems = [
+        { text: 'About', href: '#', isActive: false },
+        { text: 'Careers', href: '#', isActive: true },
+        { text: 'Events', href: '#', isActive: false },
+        { text: 'Products', href: '#', isActive: false },
+        { text: 'Support', href: '#', isActive: false },
+    ]
+
     return (
         <Navbar
             className='bg-transparent absolute text-white top-40'
@@ -54,46 +62,21 @@ export default function NavBarTailWindNextUI({ width }) {
                 <NavbarContent
                     className='sm:flex gap-5vw fixed right-10vw'
                     justify='center'>
-                    <NavbarItem>
-                        <Link
-                            className='text-white text-4xl'
-                            color='foreground'
-                            href='#'>
-                            About
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem isActive>
-                        <Link
-                            className='text-white text-4xl'
-                            href='#'
-                            aria-current='page'>
-                            Careers
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link
-                            className='text-white text-4xl'
-                            color='foreground'
-                            href='#'>
-                            Events
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link
-                            className='text-white text-4xl'
-                            color='foreground'
-                            href='#'>
-                            Products
-                        </Link>
-                    </NavbarItem>
-                    <NavbarItem>
-                        <Link
-                            className='text-white text-4xl'
-                            color='foreground'
-                            href='#'>
-                            Support
-                        </Link>
-                    </NavbarItem>
+                    {navItems.map((item, index) => (
+                        <NavbarItem
+                            key={index}
+                            isActive={item.isActive}>
+                            <Link
+                                className='text-white text-4xl'
+                                color='foreground'
+                                href={item.href}
+                                aria-current={
+                                    item.isActive ? 'page' : undefined
+                                }>
+                                {item.text}
+                            </Link>
+                        </NavbarItem>
+                    ))}
                 </NavbarContent>
             )}
         </Navbar>
