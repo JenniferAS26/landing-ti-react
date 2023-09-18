@@ -26,7 +26,7 @@ export default function NavBarTailWindNextUI({ width }) {
 
     return (
         <Navbar
-            className='top-40 sm:flex'
+            className='bg-transparent absolute text-white top-40'
             classNames={{
                 item: [
                     'flex',
@@ -46,52 +46,56 @@ export default function NavBarTailWindNextUI({ width }) {
                 ],
             }}>
             <NavbarBrand>
-                <p className='font-bold fixed left-10vw'>loopstudios</p>
+                <p className='font-bold fixed left-10vw font-inherit'>
+                    loopstudios
+                </p>
             </NavbarBrand>
-            <NavbarContent
-                className='sm:flex gap-5vw fixed right-10vw'
-                justify='center'>
-                <NavbarItem>
-                    <Link
-                        className='text-white text-4xl'
-                        color='foreground'
-                        href='#'>
-                        About
-                    </Link>
-                </NavbarItem>
-                <NavbarItem isActive>
-                    <Link
-                        className='text-white text-4xl'
-                        href='#'
-                        aria-current='page'>
-                        Careers
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link
-                        className='text-white text-4xl'
-                        color='foreground'
-                        href='#'>
-                        Events
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link
-                        className='text-white text-4xl'
-                        color='foreground'
-                        href='#'>
-                        Products
-                    </Link>
-                </NavbarItem>
-                <NavbarItem>
-                    <Link
-                        className='text-white text-4xl'
-                        color='foreground'
-                        href='#'>
-                        Support
-                    </Link>
-                </NavbarItem>
-            </NavbarContent>
+            {width >= 768 && (
+                <NavbarContent
+                    className='sm:flex gap-5vw fixed right-10vw'
+                    justify='center'>
+                    <NavbarItem>
+                        <Link
+                            className='text-white text-4xl'
+                            color='foreground'
+                            href='#'>
+                            About
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem isActive>
+                        <Link
+                            className='text-white text-4xl'
+                            href='#'
+                            aria-current='page'>
+                            Careers
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link
+                            className='text-white text-4xl'
+                            color='foreground'
+                            href='#'>
+                            Events
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link
+                            className='text-white text-4xl'
+                            color='foreground'
+                            href='#'>
+                            Products
+                        </Link>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <Link
+                            className='text-white text-4xl'
+                            color='foreground'
+                            href='#'>
+                            Support
+                        </Link>
+                    </NavbarItem>
+                </NavbarContent>
+            )}
         </Navbar>
     )
 }

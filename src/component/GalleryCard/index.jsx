@@ -13,7 +13,7 @@ const GalleryCard = ({ cardDetail }) => {
             <h3 className='gallery-card__title'>{cardDetail.name}</h3>
             <picture className='gallery-card__image-container'>
                 <source
-                    media='(min-width: $desktop)'
+                    media='(min-width: 1440px)'
                     srcSet={cardDetail.desktop_image}
                 />
                 <img
