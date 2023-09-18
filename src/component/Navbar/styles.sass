@@ -1,3 +1,4 @@
+@use '../../styles/_variables.sass' as *
 @tailwind base
 @tailwind components
 @tailwind utilities
@@ -6,7 +7,9 @@
     --navbar-height: 0
 
 .left-10vw
-    left: 10vw
+    left: calc((100 - 85)/2/100 * $mobile)
+    @media (min-width: 768px)
+        left: 10vw
 
 .right-10vw
     right: 10vw

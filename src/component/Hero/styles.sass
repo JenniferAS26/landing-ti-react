@@ -1,12 +1,21 @@
 @use '../../styles/_variables.sass' as *
 
+*
+  font-size: 4rem
+  letter-spacing: -0.05em
+  color: $White
+  line-height: 0.9
+  @media (min-width: $tablet)
+    font-size: 4vw
+
 .hero
+  color: $White
   width: inherit
   height: 700px
   position: relative
   display: grid
   justify-items: center
-  @media (min-width: $desktop)
+  @media (min-width: $tablet)
     justify-items: start
   &__image-container
     width: 100%
@@ -22,22 +31,20 @@
     padding: 25px
     width: 85%
     bottom: calc( 62% - 350px / 2)
-    @media (min-width: $desktop)
+    @media (min-width: $tablet)
       margin-left: 10vw
-      width: inherit
+      width: fit-content
       bottom: calc( 40% - 350px / 2)
       padding: 40px
     &--title
       font-family: $font-source1
-      font-size: 5rem
       font-weight: $light-weight
       text-transform: uppercase
-      @media (min-width: $desktop)
     span
-      font-size: min(8vw, 7rem)
       letter-spacing: 0.05rem
       font-size: 4rem
       display: block
-      @media (min-width: $desktop)
+      @media (min-width: $tablet)
+        font-size: min(8vw, 7rem)
         letter-spacing: 1rem
         line-height: 1.1

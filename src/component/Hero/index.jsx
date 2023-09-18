@@ -8,6 +8,7 @@ import {
 import { Cloudinary } from '@cloudinary/url-gen'
 import './styles.sass'
 import useWindowSize from '../../hooks/useWindowSize'
+import React from 'react'
 
 const Hero = ({ children }) => {
     Hero.propTypes = {
@@ -17,6 +18,7 @@ const Hero = ({ children }) => {
     const cloudinary = new Cloudinary({
         cloud: {
             cloudName: 'vegadelalyra',
+            width: PropTypes.number.isRequired,
         },
     })
 
@@ -35,7 +37,11 @@ const Hero = ({ children }) => {
 
     return (
         <section className='hero'>
-            {children}
+            {React.Children.map(children, child => {
+                if (React.isValidElement(child))
+                    return React.cloneElement(child, { width })
+                return child
+            })}
             <picture className='hero__image-container'>
                 {width <= 768 ? (
                     <AdvancedImage
@@ -65,8 +71,8 @@ const Hero = ({ children }) => {
             </picture>
             <div className='hero__title-container'>
                 <h1 className='hero__title-container--title'>
-                    <span>immersive</span> 
-                    <span>experieces</span> 
+                    <span>immersive</span>
+                    <span>experieces</span>
                     <span>that deliver</span>
                 </h1>
             </div>

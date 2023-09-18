@@ -1,7 +1,7 @@
 @use '../../styles/_variables.sass' as *
 @use '../../styles/_mixins' as *
 
-.gallery-section 
+.gallery-section
   width: inherit
   height: 100%
   // margin-top: 20px
@@ -18,7 +18,7 @@
     color: $Black
     text-align: center
     align-self: start
-  &__cards-container 
+  &__cards-container
     width: 100%
     height: 100%
     display: grid
@@ -27,16 +27,16 @@
   &__button
     @include buttonStyle($width: 150px , $height: 40px, $b-r: none, $bg-color: $White, $color: $Black, $f-s: 1.4rem)
     border: 1px solid $Black
-    font-weight: $medium-weight 
+    font-weight: $medium-weight
     letter-spacing: 3px
     align-self: end
     cursor: pointer
-  @media (min-width: 1440px)
+  @media (min-width: $desktop)
     grid-template-rows: 50px 1fr
     grid-template-columns: repeat(2, 1fr)
     grid-template-areas: "title button" "card-container card-container"
     gap: 20px
-    &__title 
+    &__title
       font-size: 3.8rem
       grid-area: title
       align-self: center
@@ -49,11 +49,9 @@
       grid-template-columns: repeat(4, 255px)
       grid-template-rows: repeat(2, 450px)
       gap: 70px
-    &__button 
+    &__button
       @include buttonStyle($width: 150px , $height: 40px, $b-r: none, $bg-color: $Black, $color: $White, $f-s: 1.6rem)
       margin-right: 101px
       grid-area: button
       align-self: center
       justify-self: flex-end
-    
-  
