@@ -10,7 +10,7 @@ import {
 
 export default function NavBarTailWindNextUI({ width }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    
+
     const menuItems = [
         'Profile',
         'Dashboard',
@@ -26,7 +26,7 @@ export default function NavBarTailWindNextUI({ width }) {
 
     return (
         <Navbar
-            className='top-40'
+            className='top-40 sm:flex'
             classNames={{
                 item: [
                     'flex',
