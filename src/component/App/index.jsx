@@ -20,7 +20,7 @@ function App() {
             <Hero>
                 <NavBarTailWindNextUI />
             </Hero>
-            <Info />
+            {/* <Info /> */}
             <Gallery>
                 {cardDetails.map((cardDetail, index) => (
                     <GalleryCard
