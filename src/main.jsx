@@ -12,6 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <NextUIProvider>
     <BrowserRouter>
       <AppRoutes />
-    </BrowserRouter>,
+    </BrowserRouter>
   </NextUIProvider>
 )
