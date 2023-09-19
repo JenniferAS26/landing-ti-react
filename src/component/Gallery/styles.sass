@@ -14,6 +14,11 @@
   align-items: center
   background-color: $White
   position: relative
+  &__button
+    transition: all 0.25s ease
+    &:hover
+      background-color: black
+      color: white
   @media (min-width: $tablet)
     height: 680px
     grid-template-rows: 80px 1fr
@@ -42,6 +47,7 @@
     &__title
       font-size: 4rem !important
     &__button
+      display: none    &__button
       width: 200px !important
       height: 50px !important
       font-size: 2rem !important
@@ -67,7 +73,7 @@
     letter-spacing: 3px
     cursor: pointer
 
-@media (max-width: 767px) 
+@media (max-width: 767px)
   .gallery-section__button
     position: absolute
     bottom: 0
