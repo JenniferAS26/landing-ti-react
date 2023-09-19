@@ -10,6 +10,12 @@ const Footer = () => {
     {text: 'Products'},
     {text: 'Support'},
   ]
+  const icons = [
+    { brand: <AiFillFacebook />},
+    { brand: <AiOutlineTwitter />},
+    { brand: <BsPinterest />},
+    { brand: <AiOutlineInstagram />},
+  ]
 
   return (
     <section className='footer'>
@@ -18,17 +24,23 @@ const Footer = () => {
         <ul className='logo-options__list'>
           {
             items.map((item, index) => (
-              <li key={index}>{item.text}</li>
+              <li className='logo-options__list--items' key={index}>{item.text}</li>
             ))
           }
         </ul>
       </div>
       <div className='social-media'>
         <ul className='social-media__list'>
-          <li><AiFillFacebook /></li>
-          <li><AiOutlineTwitter /></li>
-          <li><BsPinterest /></li>
-          <li><AiOutlineInstagram /></li>
+          {
+            icons.map((icon, index) => (
+                <li 
+                  className='social-media__list--items' 
+                  key={index}
+                >
+                  {icon.brand}
+                </li>
+            ))
+          }
         </ul>
         <p className='social-media__text'>© 2021 Loopstudios. All rights reserved</p>
       </div>

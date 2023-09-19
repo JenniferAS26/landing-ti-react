@@ -16,6 +16,7 @@
     grid-template-rows: 100px auto
     justify-items: center
     &__title
+      font-size: 4.5rem
       align-self: center
     &__list
       display: grid
@@ -41,6 +42,12 @@
     grid-template-columns: repeat(2, 1fr)
     .social-media
       align-self: center
+      &__list  
+        width: 250px
+        @include flexCenter(row, $justify: space-between, $align: center)
+        padding: 0
+        li, * 
+          font-size: 3.5rem
       &__text
         font-size: 2.6rem 
   @media (min-width: $desktop)  
@@ -49,6 +56,9 @@
     grid-template-columns: repeat(2, 1fr)
     .logo-options
       min-height: 160px
+      align-content: center
+      grid-template-rows: repeat(2, 60px)
+      align-items: center
       align-content: center
       &__title
         margin-top: 20px
@@ -64,6 +74,9 @@
       min-height: 160px
       justify-items: end
       padding: 0 
+      grid-template-rows: repeat(2, 50px)
+      align-items: center
+      align-content: center
       &__list
         width: inherit
         justify-content: space-between
