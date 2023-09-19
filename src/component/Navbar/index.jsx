@@ -6,23 +6,12 @@ import {
     NavbarContent,
     NavbarItem,
     Link,
+    NavbarMenuToggle,
+    NavbarMenu
 } from '@nextui-org/react'
 
 export default function NavBarTailWindNextUI({ width }) {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-    const menuItems = [
-        'Profile',
-        'Dashboard',
-        'Activity',
-        'Analytics',
-        'System',
-        'Deployments',
-        'My Settings',
-        'Team Settings',
-        'Help & Feedback',
-        'Log Out',
-    ]
 
     const navItems = [
         { text: 'About', href: '#', isActive: false },
