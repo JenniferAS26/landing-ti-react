@@ -1,10 +1,10 @@
 // import { Outlet } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import Hero from '../Hero'
 import NavBarTailWindNextUI from '../Navbar'
 import Gallery from '../Gallery'
 import GalleryCard from "../GalleryCard";
 import Info from "../Info"
+import Hero from '../Hero'
 import Footer from '../Footer';
 
 function App() {
